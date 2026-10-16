@@ -1,0 +1,14 @@
+# dsh-yuque-mcp bundle：注册语雀 MCP 桥接插件。
+# 被 profile 的 dsh.profile.bundles 选中时加载 lib/index.js，由它挂载官方
+# @deepseek-ai/dsh-mcp-client 指向内置 yuque-mcp 服务端，并在缺少/失效的
+# YUQUE_TOKEN 上弹窗向用户索取。
+#
+# 需要覆盖配置时，在 profile 的 cordis.patch.yml 里按 id 打补丁（不是改这里）：
+#   - id: yuque-mcp
+#     config:
+#       serverName: yuque
+#       token: yq_xxx
+- insert:
+    - id: yuque-mcp
+      name: dsh-yuque-mcp
+      config: {}

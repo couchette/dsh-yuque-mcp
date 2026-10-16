@@ -1,0 +1,27 @@
+{
+  "upstream": {
+    "repo": "https://github.com/yuque/yuque-mcp-server.git",
+    "homepage": "https://github.com/yuque/yuque-mcp-server#readme",
+    "gitRef": "757a408c29cb21ba493a22de2ac99126d2460f75",
+    "commit": "757a408c29cb21ba493a22de2ac99126d2460f75",
+    "describe": "757a408",
+    "version": "1.0.0"
+  },
+  "bundle": {
+    "entry": "src/cli.ts",
+    "file": "vendor/yuque-mcp-server/build/index.js",
+    "format": "esm",
+    "interop": "createRequire banner（CJS 依赖的动态 require 垫片）",
+    "platform": "node",
+    "target": "node18",
+    "bytes": 1177497,
+    "sha256": "1d9c383b7d0727cb3f7b92e954c2325da0f59f238d7a3eb5548903fa41a08b48"
+  },
+  "build": {
+    "script": "scripts/vendor-server.mjs",
+    "esbuild": "0.25.12",
+    "node": "v24.21.0"
+  },
+  "license": "MIT",
+  "vendoredAt": "2026-10-16T04:11:00.115Z"
+}

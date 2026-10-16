@@ -1,0 +1,58 @@
+{
+  "name": "dsh-yuque-mcp",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness 插件：把语雀（Yuque）知识库接入 DSH——内置零依赖 yuque-mcp 服务端，首次运行/令牌失效时弹窗索取 YUQUE_TOKEN",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "BSD-2-Clause",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "lib",
+    "vendor",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/couchette/dsh-yuque-mcp.git"
+  },
+  "homepage": "https://github.com/couchette/dsh-yuque-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/couchette/dsh-yuque-mcp/issues"
+  },
+  "scripts": {
+    "vendor": "node scripts/vendor-server.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "test": "node scripts/smoke.mjs"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@deepseek-ai/dsh-mcp-client": "*",
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/dsh-user-questions": "*",
+    "@deepseek-ai/schemastery": "*"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "yuque",
+    "语雀",
+    "mcp",
+    "yuque-mcp",
+    "knowledge-base",
+    "知识库"
+  ],
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}
